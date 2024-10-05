@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.0f0d2f7f.chunk.css",
+    "main.js": "/my-portfolio/static/js/main.0faaf391.chunk.js",
+    "main.js.map": "/my-portfolio/static/js/main.0faaf391.chunk.js.map",
+    "runtime~main.js": "/my-portfolio/static/js/runtime~main.c8052818.js",
+    "runtime~main.js.map": "/my-portfolio/static/js/runtime~main.c8052818.js.map",
+    "static/css/2.98036eff.chunk.css": "/my-portfolio/static/css/2.98036eff.chunk.css",
+    "static/js/2.833aadba.chunk.js": "/my-portfolio/static/js/2.833aadba.chunk.js",
+    "static/js/2.833aadba.chunk.js.map": "/my-portfolio/static/js/2.833aadba.chunk.js.map",
+    "static/js/3.8b0869b4.chunk.js": "/my-portfolio/static/js/3.8b0869b4.chunk.js",
+    "static/js/3.8b0869b4.chunk.js.map": "/my-portfolio/static/js/3.8b0869b4.chunk.js.map",
+    "index.html": "/my-portfolio/index.html",
+    "precache-manifest.95f90f88b30cc930be56de908759bbc9.js": "/my-portfolio/precache-manifest.95f90f88b30cc930be56de908759bbc9.js",
+    "service-worker.js": "/my-portfolio/service-worker.js",
+    "static/css/2.98036eff.chunk.css.map": "/my-portfolio/static/css/2.98036eff.chunk.css.map",
+    "static/css/main.0f0d2f7f.chunk.css.map": "/my-portfolio/static/css/main.0f0d2f7f.chunk.css.map",
+    "static/media/index.css": "/my-portfolio/static/media/skills.a53c1fc0.jpg",
+    "static/media/ai .png": "/my-portfolio/static/media/ai .d5ac0407.png",
+    "static/media/btech.jpg": "/my-portfolio/static/media/btech.f2736b1d.jpg",
+    "static/media/chatbot.png": "/my-portfolio/static/media/chatbot.52596939.png",
+    "static/media/covid19dashboard.png": "/my-portfolio/static/media/covid19dashboard.b83d97d0.png",
+    "static/media/gorest.png": "/my-portfolio/static/media/gorest.b5585705.png",
+    "static/media/jobby.png": "/my-portfolio/static/media/jobby.87c65ab4.png",
+    "static/media/logo.png": "/my-portfolio/static/media/logo.9cd9267c.png",
+    "static/media/mydashboard.png": "/my-portfolio/static/media/mydashboard.df86c703.png",
+    "static/media/nxttrendz.png": "/my-portfolio/static/media/nxttrendz.745640c1.png",
+    "static/media/nxtwatch.png": "/my-portfolio/static/media/nxtwatch.1dd96e70.png",
+    "static/media/priceofdiamond.png": "/my-portfolio/static/media/priceofdiamond.db26cdf7.png",
+    "static/media/sireesha.jpg": "/my-portfolio/static/media/sireesha.f8c4313f.jpg"
+  }
+}
