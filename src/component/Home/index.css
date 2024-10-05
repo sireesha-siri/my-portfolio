@@ -1,0 +1,62 @@
+.home-container {
+    background-image: url('../../images/banner.png');
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'sans-serif';
+}
+
+.home-sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-container {
+    margin-bottom: 10%;
+    padding-left: 10%;
+    margin-top: 9%;
+}
+
+.name {
+    color: white;
+    font-size: 45px; /* Default font size */
+}
+
+.intro {
+    color: white;
+    font-size: 35px; /* Default font size */
+    font-family: 'Roboto';
+}
+
+.download-cv-button {
+    height: 50px;
+    width: 170px;
+    padding: 7px;
+    color: #00e7ff;
+    border: 1px solid #00e7ff;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.download-cv-button:hover {
+    background-color: cyan;
+    color: #092e33; 
+    border-radius: 10px;
+}
+
+/* Responsive Font Sizes for Medium and Below Devices */
+@media screen and (max-width: 768px) {
+    .name {
+        font-size: 6vw; /* Adjusted font size for medium and below devices */
+    }
+
+    .intro {
+        font-size: 5vw; /* Adjusted font size for medium and below devices */
+    }
+    .info-container{
+        margin-top: 27%;
+    }
+}

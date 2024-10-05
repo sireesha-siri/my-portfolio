@@ -1,0 +1,27 @@
+/* src/ArrowToTop.css */
+.arrow-to-top {
+    position: fixed; /* Fixes the position */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #00BFFF; /* Background color of the button */
+    border-radius: 50%; /* Makes it circular */
+    padding: 10px; /* Adds space around the icon */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+    transition: transform 0.3s; /* Animation for scaling */
+    animation: moveUpDown 1.5s ease-in-out infinite; /* Calls the keyframe animation */
+}
+
+.arrow-to-top:hover {
+    transform: scale(1.1); /* Scales up when hovered */
+}
+
+/* Keyframes for up and down movement */
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0); /* No movement */
+    }
+    50% {
+        transform: translateY(-10px); /* Moves up by 10px */
+    }
+}

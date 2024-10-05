@@ -1,0 +1,197 @@
+.navs-content{
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-style{
+  width: 100px;
+  height: 90px;
+}
+
+.nav-bar{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Open Sans';
+}
+
+.navs-item{
+  color: white;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  position: relative; 
+  padding: 20px; 
+  transition: color 0.3s ease; 
+  cursor: pointer; 
+}
+
+/* Remove text decoration for links */
+.tab-link {
+  text-decoration: none;
+  color: inherit; /* Ensures text color matches the nav item color */
+}
+
+/* Hover and selected state color */
+.navs-item.selected {
+  color: #00BFFF; /* Change to your desired color */
+}
+
+/* Border line effect */
+.navs-item::after {
+  content: ''; /* Required to create a pseudo-element */
+  position: absolute;
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  bottom: 0; /* Position the border directly below the text */
+  height: 2px; /* Adjust the height of the border */
+  background-color: #00BFFF; /* Change to your desired border color */
+  transform: scaleX(0); /* Start with no width */
+  transition: transform 0.3s ease; /* Smooth transition for the border */
+}
+
+/* Expand the border on hover and for the selected item */
+.navs-item.selected::after,
+.navs-item:hover::after {
+  transform: scaleX(1); /* Expand the border */
+}
+
+
+.header-for-large{
+  padding: 20px;
+}
+
+/* Write your CSS here */
+.nav-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-for-small{
+  padding: 10px;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  max-width: 458px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-content {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    max-width: 1110px;
+  }
+}
+
+.website-logo {
+  width: 70px;
+  height: 60px;
+  margin-right: 300px;
+}
+
+.ham-burger-icon {
+  background-color: transparent;
+  width: 42px;
+  height: 35px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 458px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-container {
+    max-width: 1110px;
+  }
+}
+
+.close-button {
+  align-self: flex-end;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin-top: 32px;
+  outline: none;
+  cursor: pointer;
+}
+
+.nav-list {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1e293b;
+  text-decoration: none;
+  margin-bottom: 32px;
+}
+
+.nav-item {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0px;
+  margin-left: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-item {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .header-for-large{
+      display: none;
+  }
+
+  .header-for-small{
+      display: block;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .header-for-large{
+      display: block;
+  }
+
+  .header-for-small{
+      display: none;
+  }
+}

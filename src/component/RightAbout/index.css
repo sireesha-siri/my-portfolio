@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.text-container {
+    height: auto; /* Use auto to allow flexibility */
+    min-width: 80vh; /* Maximum width for larger screens */
+    width: 80vw; /* 80% of the viewport width */
+    padding: 2rem; /* Use rem for responsive padding */
+    margin: 20px auto; /* Centered horizontally */
+}
+
+.about-me-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem; /* Use rem for responsive font size */
+    color: #ffffff;
+}
+
+.highlight-text {
+    color: #13a0b3;
+}
+
+/* Media Queries for Different Screen Sizes */
+@media (max-width: 1200px) {
+    .text-container {
+        width: 70vw; /* Slightly larger width for medium screens */
+    }
+
+    .about-me-text {
+        font-size: 1.2rem; /* Adjust font size for readability */
+    }
+}
+
+@media (max-width: 992px) {
+    .text-container {
+        width: 90vw; /* Use nearly full width on smaller screens */
+        padding: 1.5rem; /* Reduce padding */
+    }
+
+    .about-me-text {
+        font-size: 1.1rem; /* Slightly smaller font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .text-container {
+        width: 95vw; /* Use almost full width on small devices */
+        padding: 1rem; /* Further reduce padding */
+    }
+
+    .about-me-text {
+        font-size: 1rem; /* Decrease font size for small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .text-container {
+        width: 100vw; /* Full width for very small screens */
+        padding: 0.5rem; /* Minimal padding */
+    }
+
+    .about-me-text {
+        font-size: 0.9rem; /* Smallest font size for very small devices */
+    }
+}
