@@ -27,12 +27,12 @@ const projectData = {
     dynamic: [
         { title: 'My Dashboard', image: mydashboard, description: 'A personal dashboard that displays information about me, including skills, projects, and achievements in an organized way.', skills: ['HTML', 'CSS', 'JS'], link: 'http://sirisdashboard.ccbp.tech/' },
         { title: 'Go REST Console', image: gorest, description: 'Go Rest Console is a tool designed to help users easily test and analyze API performance, offering insights and simplifying API interaction.', skills: ['HTML', 'CSS', 'JS', 'Bootstrap', 'REST API'], link: 'http://siriapitesting.ccbp.tech' },
-        { title: 'Chatbot', image: chatbot, description: 'A simple chatbot that engages users with conversational responses by generating random values. It mimics basic dialogue interactions, offering a fun and interactive way to simulate conversation.', skills: ['HTML', 'CSS', 'JS', 'Bootstrap'], link: 'http://chatbotofsiri.ccbp.tech/' },
+        { title: 'Chatbot', image: chatbot, description: 'A simple chatbot that engages users with conversational responses by generating random values. Offering a fun and interactive conversation.', skills: ['HTML', 'CSS', 'JS', 'Bootstrap'], link: 'http://chatbotofsiri.ccbp.tech/' },
     ],
     python: [
         { title: 'AI-Resume Parsing', image: ai, description: 'Extract text from resume images using OCR and rank the top 5 candidates out of 10 with NLP. This project streamlines the recruitment process, making it faster and more accurate.', skills: ['Python', 'NLP', 'OCR', 'Tessract'], link: 'https://github.com/sireesha-siri/Image-Processing-Project' },
         { title: 'Price of Diamond', image: priceofdiamond, description: 'This project predicts diamond prices by applying machine learning algorithms to analyze features like carat, color, clarity, and cut. It aims to provide accurate price estimates based on these characteristics.', skills: ['Python', 'Machine Learning', 'Google colob'], link: 'https://github.com/sireesha-siri/Price_Of_The_Diamond' },
-        { title: 'Covid 19 Dashboard', image: covid19dashboard, description: 'This project collects COVID-19 data and displays it using scatter plots, bar charts, and pie charts. It compares daily cases, gender distribution, and age groups to provide clear insights into the pandemics impact.', skills: ['Python', 'Matplotlib', 'Jupyter Notebook'], link: 'https://github.com/sireesha-siri/Covid19_DashBoard' },
+        { title: 'Covid 19 Dashboard', image: covid19dashboard, description: 'This project collects COVID-19 data and displays it using scatter plots, bar charts, and pie charts. It compares daily cases, gender distribution, and age groups to provide clear insights during pandemic.', skills: ['Python', 'Matplotlib', 'Jupyter Notebook'], link: 'https://github.com/sireesha-siri/Covid19_DashBoard' },
     ],
 };
 

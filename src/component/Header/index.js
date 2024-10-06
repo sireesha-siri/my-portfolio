@@ -4,9 +4,12 @@ import logo from '../../images/logo.png';
 
 import Popup from 'reactjs-popup';
 
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { GiHamburgerMenu, GiSkills } from 'react-icons/gi';
 import { AiFillHome } from 'react-icons/ai';
 import { BsInfoCircleFill } from 'react-icons/bs';
+import { IoMdSchool } from "react-icons/io";
+import { FaProjectDiagram } from 'react-icons/fa';
+import { FaPhoneVolume } from "react-icons/fa6";
 
 import ArrowToTop from '../ArrowToTop';
 import './index.css';
@@ -27,7 +30,7 @@ const Header = () => {
             <div className="header-for-large">
                 <nav>
                     <div className="navs-content">
-                        <img src={logo} alt='logo' className="logo-style" />
+                        <img src={logo} alt='logo' className="logo-style"/>
                         <ul className="nav-bar">
                             <li
                                 className={`navs-item ${selectedNav === 'home' ? 'selected' : ''}`}
@@ -92,27 +95,27 @@ const Header = () => {
                             <div className="modal-container">
                                 <ul className="nav-list">
                                     <li onClick={() => { handleNavClick('home'); close(); }}>
-                                        <AiFillHome size="36" />
+                                        <AiFillHome size="30" className='mobile-small-icons'/>
                                         <a href="#home" className="nav-item tab-link">Home</a>
                                     </li>
                                     <li onClick={() => { handleNavClick('about'); close(); }}>
-                                        <BsInfoCircleFill size="32" />
+                                        <BsInfoCircleFill size="30" className='mobile-small-icons' />
                                         <a href="#about" className="nav-item tab-link">About</a>
                                     </li>
                                     <li onClick={() => { handleNavClick('education'); close(); }}>
-                                        <AiFillHome size="36" />
+                                        <IoMdSchool size="30" className='mobile-small-icons' />
                                         <a href="#education" className="nav-item tab-link">Education</a>
                                     </li>
                                     <li onClick={() => { handleNavClick('skills'); close(); }}>
-                                        <AiFillHome size="36" />
+                                        <GiSkills size="30" className='mobile-small-icons' />
                                         <a href="#skills" className="nav-item tab-link">Skills</a>
                                     </li>
                                     <li onClick={() => { handleNavClick('projects'); close(); }}>
-                                        <AiFillHome size="36" />
+                                        <FaProjectDiagram size="30" className='mobile-small-icons' />
                                         <a href="#projects" className="nav-item tab-link">Projects</a>
                                     </li>
                                     <li onClick={() => { handleNavClick('contact'); close(); }}>
-                                        <AiFillHome size="36" />
+                                        <FaPhoneVolume size="30" className='mobile-small-icons' />
                                         <a href="#contact" className="nav-item tab-link">Contact</a>
                                     </li>
                                 </ul>

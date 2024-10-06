@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
 
-.projects-container{
+.projects-container {
     background-image: url('https://img.freepik.com/premium-photo/black-background-with-green-blue-pattern_954894-120087.jpg?w=360');
     min-height: 110vh;
     padding: 10px;
     background-size: cover;
     padding-bottom: 150px;
+    width: 100vw;
 }
 
-.projects-title{
+.projects-title {
     color: cyan;
     font-family: 'sans-serif';
     text-align: center;
@@ -19,41 +20,23 @@
 
 .project-tabs {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center align items */
     margin-bottom: 20px;
     border: 1px solid #13a0b3;
     border-radius: 15px;
-    padding: 20px;
-    margin: 0 auto; /* Center the tabs horizontally */
-    width: 80%; /* Set a responsive width for large screens */
+    padding: 10px 0; /* Adjust padding */
+    width: auto; /* Use auto to fit content without overflow */
+    max-width: 97%; /* Ensure it doesn't exceed the container */
+    margin-left: 0%;
+   
 }
 
-/* For extra large screens (desktops) */
-@media (min-width: 1200px) {
-    .project-tabs {
-        width: 50%; /* More centered and compact on very large screens */
-    }
-}
-
-/* For medium to large screens (tablets, small desktops) */
-@media (min-width: 768px) and (max-width: 1199px) {
-    .project-tabs {
-        width: 70%; /* Adjust for medium devices */
-    }
-}
-
-/* For small devices (mobile phones) */
-@media (max-width: 767px) {
-    .project-tabs {
-        width: 90%; /* Make the tabs almost full-width on small screens */
-        padding: 10px; /* Reduce padding on small devices */
-    }
-}
 
 .project-tab {
+    flex: 1; /* Allow tabs to grow equally */
+    margin: 0 5px; /* Add margin for spacing */
     background-color: #f0f0f0;
     padding: 10px 20px;
-    margin: 0 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     border: none;
@@ -75,7 +58,7 @@
 .project-cards-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
+    gap: 5px;
     margin-top: 7%;
 }
 
@@ -90,83 +73,96 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
-
 .project-card {
-    background-color: transparent; /* White background for professionalism */
-    border: 1px solid cyan; /* Light border for separation */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Inner padding */
-    text-align: center; /* Centered text */
-    position: relative; /* For positioning */
-    overflow: hidden; /* To prevent overflow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition for transformations */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Initial shadow */
+    width: 100%;
+    max-width: 400px;
+    margin: 15px auto; /* Center card with top/bottom spacing */
+    background-color: transparent;
+    border: 1px solid cyan;
+    border-radius: 10px;
+    padding: 20px; /* Added padding for breathing space */
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-card:hover {
-    transform: translateY(-5px); /* Lift effect */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-    background-color: #e5ffff; /* Light blue background on hover for visibility */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #191919;
 }
 
 .project-image {
-    width: 100%; /* Responsive image */
-    height: 40%; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners for the image */
-    transition: transform 0.3s ease; /* Smooth scaling */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Space below the image */
+    transition: transform 0.3s ease;
 }
 
 .project-card:hover .project-image {
-    transform: scale(1.05); /* Slight zoom effect on image */
+    transform: scale(1.05);
 }
 
 .project-title {
-    margin-top: 10px; /* Space above title */
     font-size: 1.5rem; /* Title size */
     color: #5b5b5b; /* Dark title color */
+    margin: 15px 0; /* Vertical spacing */
+    text-align: center; /* Centered text */
+    padding: 1px; /* Remove any padding */
+    position: relative; /* For positioning if needed */
 }
 
+
 .project-description {
-    font-size: 1rem; /* Description size */
-    color: #767676; /* Slightly lighter color for description */
-    margin: 10px 0; /* Vertical spacing */
+    font-size: 1rem;
+    color: #767676;
+    margin: 10px 0 15px; /* Space above and below description */
+    line-height: 1.5; /* Line spacing for readability */
 }
 
 .project-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px; /* Space between skill tags */
     margin-top: 15px;
-    margin-bottom: 25px; /* Space below skills */
+    margin-bottom: 25px;
 }
 
 .project-skill {
-    border: 1px solid #009999; /* Blue background for skills */
-    color: #888888; /* White text */
-    padding: 5px 10px; /* Padding for skills */
-    border-top-right-radius: 7px; /* Rounded corners for skills */
-    border-bottom-left-radius: 7px;
-    margin-right: 5px; /* Space between skills */
-    font-size: 0.9rem; /* Skill size */
-    transition: background-color 0.3s ease; /* Smooth background color transition */
+    border: 1px solid #009999;
+    color: #888888;
+    padding: 5px 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .project-skill:hover {
-    border: 1px solid #004c4c; /* Darker blue on hover for skills */
-
+    border-color: #004c4c;
+    background-color: #004c4c;
+    color: #e5ffff;
 }
 
 .project-button {
-    display: inline-block; /* Button styling */
-    padding: 10px 15px; /* Padding for button */
-    background-color: #42b3c2; /* Button color */
-    color: #032023; /* Button text color */
-    border-radius: 40%; /* Rounded corners for button */
-    text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Button transitions */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #42b3c2;
+    color: #032023;
+    border-radius: 45%;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     font-weight: 500;
+    margin-top: 15px; /* Space above the button */
 }
 
 .project-button:hover {
-    background-color: #0d707d; /* Darker blue on hover */
-    transform: scale(1.1); /* Lift effect on button hover */
-    color:#e5ffff;
+    background-color: #0d707d;
+    transform: scale(1.1);
+    color: #e5ffff;
+    border-radius: 30%;
 }

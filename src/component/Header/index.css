@@ -146,6 +146,11 @@
   justify-content: center;
   align-items: center;
   padding-left: 0;
+  color: #0b606b;
+}
+
+li:hover{
+  color: #13a0b3;
 }
 
 li {
@@ -194,4 +199,8 @@ li {
   .header-for-small{
       display: none;
   }
+}
+
+.mobile-small-icons{
+  margin-bottom: 17px;
 }

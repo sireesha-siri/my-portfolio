@@ -1,148 +1,141 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
 
-.skills-background-section{
+.skills-background-section {
     background-image: url('../../images/skills.jpg');
     background-size: cover;
     min-height: 100vh;
-    padding: 10px;
+    padding: 40px 10px;
+    width: 100vw;
 }
 
-.skills-title{
+.skills-title {
     color: cyan;
     font-family: 'sans-serif';
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 50px;
 }
 
 .skills-subset {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
-    margin: 3% auto;
+    margin: 2% auto;
     max-width: 1200px;
-  }
-  
-  .skill-set {
-    display: flex;
-    width: 100%; /* Full width for better alignment */
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    position: relative; /* Needed for label positioning */
-  }
-
-  .skill-icon {
-    margin-right: 0px; /* Adjust spacing between icon and text */
-    font-size: 2rem; /* Adjust size of the icon */
-    margin-bottom: 20px;
-}
-
-@media screen and (min-width:768px) {
-  .skill-icon{
-    margin-right: 0px;
-    margin-left: 50px;
-    margin-bottom: 20px;
-  }
-}
-  
-  .skill-heading {
-    color: #13a0b3;
-    font-size: 24px;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    text-align: left; /* Centering headers */
-    font-weight: bold;
-
-  }
-  
-  .percentage {
-    color: white;
-    font-size: 20px;
-    margin-right: 15px;
-    width: 150px; /* Set width to align with progress bar */
-    text-align: right; /* Align skill names to the right */
-  }
-  
-  .progress {
-    width: 75%; /* Progress bar width, can be adjusted */
-    height: 30px; /* Adjust the height of progress bars */
-  }
-  
-  .custom-label {
-    position: absolute;
-    right: 10px; /* Align the label to the right side inside the progress bar */
-    top: 50%;
-    transform: translateY(-50%);
-    color: black;
-    font-size: 14px;
-    font-weight: bold;
-  }
-
-  .rule{
-    width: 100%;
-    border: 1px solid cyan;
-  }
-  
-  /* For large screens (desktops, tablets) */
-  @media (min-width: 992px) {
-    .skills-subset {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-  
-    .skill-set {
-      width: calc(50% - 20px); /* Two skills in a row */
-    }
-  
-    h2 {
-      width: 100%;
-      text-align: left; /* Align headers to the left on larger screens */
-    }
-  }
-  
-  /* For extra large screens (wide desktops) */
-  @media (min-width: 1200px) {
-    .skill-set {
-      width: calc(33.33% - 20px); /* Three skills in a row */
-    }
-  }
-  
-  /* For smaller devices (mobile) */
-  @media (max-width: 991px) {
-    .skills-subset {
-      flex-direction: column;
-    }
-  
-    .skill-set {
-      width: 100%;
-      justify-content: space-between;
-    }
-    
-    p {
-      font-size: 18px;
-    }
-  
-    .progress {
-      height: 25px; /* Smaller progress bar height on small screens */
-    }
-  
-    .custom-label {
-      font-size: 12px; /* Smaller text on small screens */
-    }
-  }
-  
-
-  .skills-title {
-    font-size: 3rem; /* Example: Using rem instead of px */
+    padding: 10px;
 }
 
 .skill-heading {
-    font-size: 1.5rem; /* Adjust as needed */
+    color: #13a0b3;
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: left;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.skill-set {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 25px;
+    position: relative;
+    width: 100%;
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    color: cyan;
+    margin-right: 5px;
+    flex-shrink: 0;
+    margin-bottom: 15px;
 }
 
 .percentage {
-    font-size: 1.25rem; /* Adjust as needed */
+    color: white;
+    font-size: 1.5rem;
+    width: 150px;
+}
+
+.progress {
+    width: 65%;
+    height: 30px;
+    margin-left: 5px;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.custom-label {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Horizontal Rule Styling */
+.rule {
+    width: 100%;
+    border: 1px solid cyan;
+    margin: 30px 0;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 992px) {
+    .skills-subset {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .skill-set {
+        width: calc(50% - 20px);
+    }
+
+    .skill-heading {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .skill-set {
+        width: calc(33.33% - 20px);
+    }
+}
+
+/* For Smaller Devices (Mobile) */
+@media (max-width: 991px) {
+    .skills-subset {
+        flex-direction: column;
+    }
+
+    .skills-title {
+        font-size: 3rem;
+    }
+
+    .skill-set {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .skill-heading {
+        font-size: 1.8rem;
+    }
+
+    .percentage {
+        font-size: 1.3rem;
+    }
+
+    .progress {
+        height: 25px;
+    }
+
+    .custom-label {
+        font-size: 0.9rem;
+    }
 }

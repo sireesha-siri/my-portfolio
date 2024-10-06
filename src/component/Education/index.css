@@ -40,6 +40,7 @@
   position: relative;
   overflow: auto;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .education_sub_card{
@@ -48,11 +49,13 @@
 }
 
 .education-icon{
-  height: 80px;
-  width: 80px;
+  max-height: 80px;
+  max-width: 80px;
+  height: 10vw;
+  width: 10vw;
   border-radius: 40px;
   padding: 10px; 
-  box-shadow: 4px 4px 20px 4px cyan;
+  box-shadow: 0px 0px 14px 0px #00e5e5;
 }
 
 .education-title{

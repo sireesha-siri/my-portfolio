@@ -8,6 +8,7 @@
     display: flex; /* Flexbox for vertical stacking */
     flex-direction: column; /* Stack items vertically by default */
     align-items: center; /* Center items horizontally */
+    width: 100vw;
 }
 
 .about-title {
