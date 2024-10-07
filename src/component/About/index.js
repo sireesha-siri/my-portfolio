@@ -8,6 +8,11 @@ import './index.css'
 const About = () => (
     <div className="about-section-background" id='about'>
         <h1 className="about-title">About</h1>
+
+        <div className="image-container-for-small">
+            <img src={sireesha} alt='siri' className="my-image-for-small"/>
+        </div>
+        
         <div className="about-section-parts">
             <LeftAbout/>
         

@@ -31,41 +31,5 @@
     }
 }
 
-.parent-container{
-    padding: 30px;
-    width: 100vw;
-    text-align: center;
-    margin-top: 30px; /* Margin for spacing */
-}
 
-.image-container-for-small {
-    box-shadow: 4px 4px 20px 4px cyan; /* Add shadow effect */
-    width: 200px; /* Set width */
-    height: 225px; /* Set height to be equal to width for a circle */
-    border-radius: 50%; /* Set to 50% for circular shape */
-    position: relative; /* Positioning context for child elements */
-    overflow: hidden; /* Ensure overflow is hidden */
-    padding: 0; /* Remove padding to maintain circular shape */
-}
 
-.my-image-for-small {
-    position: absolute; /* Absolute positioning for full coverage */
-    top: 0; /* Align to top */
-    left: 0; /* Align to left */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    object-fit: cover; /* Cover the container */
-}
-
-/* Media Queries */
-@media screen and (max-width: 767px) {
-    .image-container-for-small {
-        display: block; /* Show the container on small screens */
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .image-container-for-small {
-        display: none; /* Hide the container on larger screens */
-    }
-}
