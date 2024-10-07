@@ -1,20 +1,12 @@
 .home-container {
     background-image: url('../../images/banner.png');
     background-size: cover;
-    min-height: 100vh;
+    min-height: 120vh;
     width: 100vw;
     font-family: 'sans-serif';
 }
 
-@media screen and (max-width:567px) {
-    .home-container{
-        min-width: 50vh;
-    }
 
-    .info-container{
-        margin-top: 5%;
-    }
-}
 
 .home-sub-container {
     display: flex;

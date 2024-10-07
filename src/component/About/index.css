@@ -33,5 +33,6 @@
     .about-section-parts {
         flex-direction: column; /* Stack in a column for smaller devices */
         align-items: center; /* Center items horizontally */
+        text-align: center;
     }
 }

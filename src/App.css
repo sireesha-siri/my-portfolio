@@ -12,6 +12,16 @@ body{
 
 
 /* Footer */
+@media screen and (max-width:567px) {
+  .footer{
+    font-size: 10px;
+  }
+
+  .heart-beat{
+    font-size: 10px;
+  }
+}
+
 .footer {
   padding: 30px 1%;
   background-color: #141414;

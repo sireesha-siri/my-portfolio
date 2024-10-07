@@ -6,6 +6,7 @@
     width: 80vw; /* 80% of the viewport width */
     padding: 2rem; /* Use rem for responsive padding */
     margin: 20px auto; /* Centered horizontally */
+    margin-top: 50px;
 }
 
 .about-me-text {
@@ -54,7 +55,7 @@
 @media (max-width: 576px) {
     .text-container {
         width: 100vw; /* Full width for very small screens */
-        padding: 0.5rem; /* Minimal padding */
+        padding: 1rem; /* Minimal padding */
     }
 
     .about-me-text {

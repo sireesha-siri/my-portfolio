@@ -90,8 +90,8 @@
 }
 
 .website-logo {
-  width: 70px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   margin-right: 300px;
 }
 
@@ -102,6 +102,7 @@
   border: none;
   outline: none;
   cursor: pointer;
+  margin-right: auto;
 }
 
 .popup-content {
