@@ -31,24 +31,16 @@
     }
 }
 
-.parent-container {
-    position: relative;
-}
-
-/* Make the image container fixed on smaller screens */
 .image-container-for-small {
-    box-shadow: 4px 4px 20px 4px cyan;
-    width: 150px;
-    height: 175px;
-    border-radius: 50%;
-    margin-top: 30px;
-    position: fixed; /* Fixes the container relative to the viewport */
-    top: 30px; /* Adjust the vertical position */
-    left: 20px; /* Adjust the horizontal position */
-    overflow: hidden;
-    padding: 0;
-    text-align: center;
-    z-index: 10; /* Ensures the image container stays on top */
+    box-shadow: 4px 4px 20px 4px cyan; /* Add shadow effect */
+    width: 200px; /* Set width */
+    height: 225px; /* Set height to be equal to width for a circle */
+    border-radius: 50%; /* Set to 50% for circular shape */
+    margin-top: 30px; /* Margin for spacing */
+    position: relative; /* Positioning context for child elements */
+    overflow: hidden; /* Ensure overflow is hidden */
+    padding: 0; /* Remove padding to maintain circular shape */
+    margin-left: 10%;
 }
 
 .my-image-for-small {

@@ -75,7 +75,7 @@
 /* Responsive Font Sizes for Medium and Below Devices */
 @media screen and (max-width: 768px) {
     .name {
-        font-size: 7vw; /* Adjusted font size for medium and below devices */
+        font-size: 10vw; /* Adjusted font size for medium and below devices */
     }
 
     .intro {
