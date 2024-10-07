@@ -3,6 +3,8 @@ import React from "react";
 import LeftAbout from "../LeftAbout";
 import RightAbout from "../RightAbout";
 
+import sireesha from '../../images/sireesha.jpg'
+
 import './index.css' 
 
 const About = () => (
@@ -12,7 +14,7 @@ const About = () => (
         <div className="image-container-for-small">
             <img src={sireesha} alt='siri' className="my-image-for-small"/>
         </div>
-        
+
         <div className="about-section-parts">
             <LeftAbout/>
         
