@@ -40,7 +40,7 @@
     position: relative; /* Positioning context for child elements */
     overflow: hidden; /* Ensure overflow is hidden */
     padding: 0; /* Remove padding to maintain circular shape */
-    margin-left: 10%;
+    margin-left: 15%;
 }
 
 .my-image-for-small {
