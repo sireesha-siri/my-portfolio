@@ -6,6 +6,16 @@
     font-family: 'sans-serif';
 }
 
+@media screen and (max-width:567px) {
+    .home-container{
+        min-width: 50vh;
+    }
+
+    .info-container{
+        margin-top: 5%;
+    }
+}
+
 .home-sub-container {
     display: flex;
     flex-direction: column;
