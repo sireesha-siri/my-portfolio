@@ -40,7 +40,7 @@
   position: relative;
   overflow: auto;
   cursor: pointer;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .education_sub_card{

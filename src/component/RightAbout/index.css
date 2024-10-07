@@ -7,6 +7,7 @@
     padding: 2rem; /* Use rem for responsive padding */
     margin: 20px auto; /* Centered horizontally */
     margin-top: 50px;
+    overflow-y: auto;
 }
 
 .about-me-text {
