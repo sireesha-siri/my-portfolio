@@ -26,7 +26,7 @@
     border-radius: 15px;
     padding: 10px 0; /* Adjust padding */
     width: auto; /* Use auto to fit content without overflow */
-    max-width: 97%; /* Ensure it doesn't exceed the container */
+    max-width: 100%; /* Ensure it doesn't exceed the container */
     margin-left: 0%;
    
 }
