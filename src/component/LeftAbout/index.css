@@ -31,7 +31,6 @@
     }
 }
 
-/* Ensure the parent element is positioned relative */
 .parent-container {
     position: relative;
 }
@@ -51,7 +50,6 @@
     text-align: center;
     z-index: 10; /* Ensures the image container stays on top */
 }
-
 
 .my-image-for-small {
     position: absolute; /* Absolute positioning for full coverage */
