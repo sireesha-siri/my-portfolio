@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-
 import { FaLinkedin, FaGithub, FaYoutube } from "react-icons/fa";
-
 import { MdOutlineDone, MdOutgoingMail } from "react-icons/md";
-
+import { motion } from 'framer-motion';
 import './index.css';
 
 const Contact = () => {
@@ -14,21 +12,15 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        // Here you would typically send this data to your server or email service
         console.log("Name:", name);
         console.log("Email:", email);
         console.log("Message:", message);
-        
-        // Show response message
-        setResponse('Your message has been sent!');
 
-        // Hide response message after 1 minute (60000 milliseconds)
+        setResponse('Your message has been sent!');
         setTimeout(() => {
             setResponse('');
         }, 10000);
 
-        // Reset form fields
         setName('');
         setEmail('');
         setMessage('');
@@ -36,10 +28,19 @@ const Contact = () => {
 
     return (
         <div id='contact'>
-            <div className="contact-section">
-                <div className="contact-text-container">
+            <motion.div 
+                className="contact-section"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
+            >
+                <motion.div 
+                    className="contact-text-container"
+                    initial={{ x: '-100vw' }}
+                    animate={{ x: 0 }}
+                    transition={{ type: 'spring', stiffness: 50 }}
+                >
                     <h2 className="contact-title">Connect with Me</h2>
-
                     <div className="contact-content">
                         <div className="social-icons">
                             <a href="https://www.linkedin.com/in/aguru-sireesha/" target="_blank" className="social-icon" rel="noopener noreferrer">
@@ -60,9 +61,14 @@ const Contact = () => {
                             </a>
                         </div>
                     </div>
-                </div>
-
-                <form className="contact-form" onSubmit={handleSubmit}>
+                </motion.div>
+                <motion.form 
+                    className="contact-form" 
+                    onSubmit={handleSubmit}
+                    initial={{ y: '100vh' }}
+                    animate={{ y: 0 }}
+                    transition={{ type: 'spring', stiffness: 50 }}
+                >
                     <input 
                         type="text" 
                         className="form-input" 
@@ -88,13 +94,11 @@ const Contact = () => {
                         required 
                     ></textarea>
                     <button type="submit" className="send-button">Send Message</button>
-                </form>
-            </div>
-
+                </motion.form>
+            </motion.div>
             <div className="response-container">
                 {response && <div className="response-message">{response} <MdOutlineDone className="done"/></div>}
             </div>
-
         </div>
     );
 };

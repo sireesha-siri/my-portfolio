@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion'; // Import framer-motion for animations
 
 import logo from '../../images/logo.png';
-
 import Popup from 'reactjs-popup';
 
 import { GiHamburgerMenu, GiSkills } from 'react-icons/gi';
@@ -14,8 +14,6 @@ import { FaPhoneVolume } from "react-icons/fa6";
 import ArrowToTop from '../ArrowToTop';
 import './index.css';
 
-
-
 const Header = () => {
     const [selectedNav, setSelectedNav] = useState('home');
 
@@ -24,51 +22,40 @@ const Header = () => {
         document.getElementById(navItem).scrollIntoView({ behavior: 'smooth' });
     };
 
+    // Framer Motion animation variants
+    const navItemVariants = {
+        hidden: { opacity: 0, y: -20 }, // Initial state
+        visible: { opacity: 1, y: 0 },  // Final state
+    };
+
     return (
         <>
             {/* Large screen header */}
             <div className="header-for-large">
                 <nav>
                     <div className="navs-content">
-                        <img src={logo} alt='logo' className="logo-style"/>
+                        <motion.img 
+                            src={logo} 
+                            alt='logo' 
+                            className="logo-style"
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ duration: 0.5 }}
+                        />
                         <ul className="nav-bar">
-                            <li
-                                className={`navs-item ${selectedNav === 'home' ? 'selected' : ''}`}
-                                onClick={() => handleNavClick('home')}
-                            >
-                                <a href='#home' className='tab-link'>Home</a>
-                            </li>
-                            <li
-                                className={`navs-item ${selectedNav === 'about' ? 'selected' : ''}`}
-                                onClick={() => handleNavClick('about')}
-                            >
-                                <a href='#about' className='tab-link'>About</a>
-                            </li>
-                            <li
-                                className={`navs-item ${selectedNav === 'education' ? 'selected' : ''}`}
-                                onClick={() => handleNavClick('education')}
-                            >
-                                <a href='#education' className='tab-link'>Education</a>
-                            </li>
-                            <li
-                                className={`navs-item ${selectedNav === 'skills' ? 'selected' : ''}`}
-                                onClick={() => handleNavClick('skills')}
-                            >
-                                <a href='#skills' className='tab-link'>Skills</a>
-                            </li>
-                            <li
-                                className={`navs-item ${selectedNav === 'projects' ? 'selected' : ''}`}
-                                onClick={() => handleNavClick('projects')}
-                            >
-                                <a href='#projects' className='tab-link'>Projects</a>
-                            </li>
-                            <li
-                                className={`navs-item ${selectedNav === 'contact' ? 'selected' : ''}`}
-                                style={{ paddingRight: '20px' }}
-                                onClick={() => handleNavClick('contact')}
-                            >
-                                <a href='#contact' className='tab-link'>Contact</a>
-                            </li>
+                            {['home', 'about', 'education', 'skills', 'projects', 'contact'].map((navItem, index) => (
+                                <motion.li
+                                    key={navItem}
+                                    className={`navs-item ${selectedNav === navItem ? 'selected' : ''}`}
+                                    onClick={() => handleNavClick(navItem)}
+                                    initial="hidden"
+                                    animate="visible"
+                                    variants={navItemVariants}
+                                    transition={{ delay: 0.5 * index, duration: 0.3 }} // Staggered animation
+                                >
+                                    <a href={`#${navItem}`} className='tab-link'>{navItem.charAt(0).toUpperCase() + navItem.slice(1)}</a>
+                                </motion.li>
+                            ))}
                         </ul>
                     </div>
                 </nav>
@@ -77,51 +64,62 @@ const Header = () => {
             {/* Small screen header */}
             <div className="nav-header header-for-small">
                 <div className="nav-content">
-                    <img src={logo} alt="website logo" className="website-logo" />
+                    <motion.img 
+                        src={logo} 
+                        alt="website logo" 
+                        className="website-logo"
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                    />
                     <Popup
                         modal
                         trigger={
-                            <div>
-                                <button
-                                type="button"
-                                className="ham-burger-icon"
-                                aria-label="menu"
+                            <motion.div
+                                whileTap={{ scale: 0.9 }} // Animation on tap
                             >
-                                <GiHamburgerMenu size="30" color="white" />
-                            </button>
-                            </div>
+                                <button
+                                    type="button"
+                                    className="ham-burger-icon"
+                                    aria-label="menu"
+                                >
+                                    <GiHamburgerMenu size="30" color="white" />
+                                </button>
+                            </motion.div>
                         }
                         className="popup-content"
                     >
                         {close => (
-                            <div className="modal-container">
+                            <motion.div 
+                                className="modal-container"
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.8 }}
+                                transition={{ duration: 0.3 }}
+                            >
                                 <ul className="nav-list">
-                                    <li onClick={() => { handleNavClick('home'); close(); }}>
-                                        <AiFillHome size="30" className='mobile-small-icons'/>
-                                        <a href="#home" className="nav-item tab-link">Home</a>
-                                    </li>
-                                    <li onClick={() => { handleNavClick('about'); close(); }}>
-                                        <BsInfoCircleFill size="30" className='mobile-small-icons' />
-                                        <a href="#about" className="nav-item tab-link">About</a>
-                                    </li>
-                                    <li onClick={() => { handleNavClick('education'); close(); }}>
-                                        <IoMdSchool size="30" className='mobile-small-icons' />
-                                        <a href="#education" className="nav-item tab-link">Education</a>
-                                    </li>
-                                    <li onClick={() => { handleNavClick('skills'); close(); }}>
-                                        <GiSkills size="30" className='mobile-small-icons' />
-                                        <a href="#skills" className="nav-item tab-link">Skills</a>
-                                    </li>
-                                    <li onClick={() => { handleNavClick('projects'); close(); }}>
-                                        <FaProjectDiagram size="30" className='mobile-small-icons' />
-                                        <a href="#projects" className="nav-item tab-link">Projects</a>
-                                    </li>
-                                    <li onClick={() => { handleNavClick('contact'); close(); }}>
-                                        <FaPhoneVolume size="30" className='mobile-small-icons' />
-                                        <a href="#contact" className="nav-item tab-link">Contact</a>
-                                    </li>
+                                    {['home', 'about', 'education', 'skills', 'projects', 'contact'].map((navItem) => (
+                                        <motion.li
+                                            key={navItem}
+                                            onClick={() => { handleNavClick(navItem); close(); }}
+                                            initial={{ opacity: 0, x: -50 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ duration: 0.3 }}
+                                        >
+                                            {/* Add corresponding icons */}
+                                            {navItem === 'home' && <AiFillHome size="30" className='mobile-small-icons' />}
+                                            {navItem === 'about' && <BsInfoCircleFill size="30" className='mobile-small-icons' />}
+                                            {navItem === 'education' && <IoMdSchool size="30" className='mobile-small-icons' />}
+                                            {navItem === 'skills' && <GiSkills size="30" className='mobile-small-icons' />}
+                                            {navItem === 'projects' && <FaProjectDiagram size="30" className='mobile-small-icons' />}
+                                            {navItem === 'contact' && <FaPhoneVolume size="30" className='mobile-small-icons' />}
+                                            <a href={`#${navItem}`} className="nav-item tab-link">
+                                                {navItem.charAt(0).toUpperCase() + navItem.slice(1)}
+                                            </a>
+                                        </motion.li>
+                                    ))}
                                 </ul>
-                            </div>
+                            </motion.div>
                         )}
                     </Popup>
                 </div>

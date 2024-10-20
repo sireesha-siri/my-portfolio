@@ -9,6 +9,7 @@
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 7%;
+    width: 100vw;
 }
 
 .education-main-title{
@@ -41,6 +42,11 @@
   overflow: auto;
   cursor: pointer;
   overflow: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.education_card:hover {
+  transform: scale(1.03); 
 }
 
 .education_sub_card{
