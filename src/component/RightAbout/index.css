@@ -44,22 +44,7 @@
 
 @media (max-width: 768px) {
     .text-container {
-        width: 95vw; /* Use almost full width on small devices */
-        padding: 1rem; /* Further reduce padding */
+        display: none;
     }
 
-    .about-me-text {
-        font-size: 1rem; /* Decrease font size for small screens */
-    }
-}
-
-@media (max-width: 576px) {
-    .text-container {
-        width: 100vw; /* Full width for very small screens */
-        padding: 1rem; /* Minimal padding */
-    }
-
-    .about-me-text {
-        font-size: 0.9rem; /* Smallest font size for very small devices */
-    }
 }
