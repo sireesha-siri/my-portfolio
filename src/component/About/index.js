@@ -16,18 +16,20 @@ const About = () => {
 
             <motion.div 
                 className="image-container-for-small"
-                initial={{ y: -20 }}
-                animate={{ y: 0 }}
-                transition={{ type: "spring", stiffness: 100 }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
             >
                 <img src={sireesha} alt='siri' className="my-image-for-small"/>
             </motion.div>
 
             <motion.div
                 className="text-container-for-small"
-                initial={{ x: '-100vw' }}
-                animate={{ x: 0 }}
-                transition={{ type: 'spring', stiffness: 100, duration: 5, delay: 3 }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
             >
                 <p className="about-me-text">
                     Hello! I'm <span className="highlight-text">Aguru Sireesha</span>, 

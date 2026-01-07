@@ -26,7 +26,7 @@ const RightAbout = () => {
 
     const animationProps = isDesktop
         ? { initial: { opacity: 0, x: -40 }, whileInView: { opacity: 1, x: 0 } }
-        : { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 } };
+        : { initial: { opacity: 0, y: 40 }, whileInView: { opacity: 1, y: 0 } };
 
     return (
         <motion.div
