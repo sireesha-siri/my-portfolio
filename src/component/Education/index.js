@@ -19,16 +19,18 @@ const Education = () => {
         <motion.div 
             className="education-section-background" 
             id='education'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 7, delay: 5  }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
         >
             <h1 className="education-main-title">Education</h1>
             <motion.div 
                 className="responsive-container"
-                initial={{ y: -100 }}
-                animate={{ y: 0 }}
-                transition={{ type: 'spring', stiffness: 100 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
             >
                 <Chrono
                     mode="VERTICAL_ALTERNATING"
@@ -38,7 +40,13 @@ const Education = () => {
                     fontSizes={{title: '1.5rem'}}
                     cardStyle={{ overflowY: 'auto', overflowX: 'hidden', maxWidth: '100%' }}
                 >
-                    <div className="education_card">
+                    <motion.div
+                        className="education_card"
+                        initial={{ opacity: 0, y: -30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.4, ease: "easeOut", delay: 0 }}
+                    >
                         <div className="education_sub_card">
                             <img src={nxtwave} alt='logo' className="education-icon"/>
                             <p className="education-title">Nxtwave Disruptive Technologies</p>
@@ -49,8 +57,14 @@ const Education = () => {
                                 <li>➢ Industry Ready Certification in Full-stack Development</li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="education_card">
+                    </motion.div>
+                    <motion.div
+                        className="education_card"
+                        initial={{ opacity: 0, y: -30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.4, ease: "easeOut", delay: 0.08 }}
+                    >
                         <div className="education_sub_card">
                             <img src={btech} alt='logo' className="education-icon"/>
                             <p className="education-title">Centurion University of Technology & Management</p>
@@ -62,8 +76,14 @@ const Education = () => {
                                 <li>➢ 9.3 CGPA</li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="education_card">
+                    </motion.div>
+                    <motion.div
+                        className="education_card"
+                        initial={{ opacity: 0, y: -30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.4, ease: "easeOut", delay: 0.16 }}
+                    >
                         <div className="education_sub_card">
                             <img src={inter} alt='logo' className="education-icon"/>
                             <p className="education-title mt-4">Amaravathi International Institute of Mathematics and Science</p>
@@ -75,8 +95,14 @@ const Education = () => {
                                 <li>➢ 9.75 CGPA</li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="education_card">
+                    </motion.div>
+                    <motion.div
+                        className="education_card"
+                        initial={{ opacity: 0, y: -30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.4, ease: "easeOut", delay: 0.24 }}
+                    >
                         <div className="education_sub_card">
                             <img src={school} alt='logo' className="education-icon"/>
                             <p className="education-title mt-4">St Ann's Convent English Medium School</p>
@@ -88,7 +114,7 @@ const Education = () => {
                                 <li>➢ 89.83%</li>
                             </ul>
                         </div>
-                    </div>
+                    </motion.div>
                 </Chrono>
             </motion.div>
         </motion.div>

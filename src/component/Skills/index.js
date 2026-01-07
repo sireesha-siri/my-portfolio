@@ -34,26 +34,6 @@ const skillData = [
 ];
 
 const Skills = () => {
-    const containerVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                type: 'spring',
-                stiffness: 50,
-                staggerChildren: 0.3,
-                duration : 15,
-                delay : 13
-            }
-        }
-    };
-
-    // const itemVariants = {
-    //     hidden: { opacity: 0, y: 20 },
-    //     visible: { opacity: 1, y: 0 }
-    // };
-
     return (
         <div className='skills-background-section' id='skills'>
             <h1 className='skills-title'>Skills</h1>
@@ -65,9 +45,10 @@ const Skills = () => {
                             <motion.div 
                                 className='skill-set' 
                                 key={idx}
-                                initial="hidden"
-                                animate="visible"
-                                variants={containerVariants}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.3 }}
+                                transition={{ duration: 0.5, ease: "easeOut" }}
                             >
                                 <div className='skill-icon'>{item.icon}</div>
                                 <p className='percentage'>{item.skill}</p>

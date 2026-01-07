@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './index.css';
 import nxtwatch from '../../images/nxtwatch.png';
-import nxttrendz from '../../images/nxttrendz.png';
 import jobby from '../../images/jobby.png';
 import mydashboard from '../../images/mydashboard.png';
 import gorest from '../../images/gorest.png';
@@ -16,7 +15,6 @@ const projectData = {
     frontend: [
         { title: 'Tasty Kitchen', image: tasty, description: 'Tasty Kitchen is a food ordering app inspired by Swiggy and Zomato, allowing users to browse restaurants, view dynamic menus, manage their cart, and complete secure checkouts, with demo credentials: Username: rahul, Password: rahul@2021.', skills: ['HTML', 'CSS', 'React', 'REST API'], link: 'https://siristastyhub.ccbp.tech/' },
         { title: 'Nxt Watch', image: nxtwatch, description: 'Nxtwatch is a YouTube clone that allows users to browse, search, and watch videos. It mimics core YouTube functionalities, providing a seamless video streaming experience. User name rahul, password rahul@2021', skills: ['HTML', 'CSS', 'React', 'REST API'], link: 'http://nxtwatchbysiri.ccbp.tech/' },
-        { title: 'Nxt Trendz', image: nxttrendz, description: 'Nxt Trendz is an e-commerce website where users can browse, search, and view product details with an easy-to-use interface. User name rahul, password rahul@2021.', skills: ['HTML', 'CSS', 'React', 'REST API'], link: 'http://asirisnxttrendz.ccbp.tech/' },
         { title: 'Jobby App', image: jobby, description: 'Jobby App is a comprehensive job search platform where users can explore, filter, and apply for various job opportunities based on their preferences. User name rahul, password rahul@2021.', skills: ['HTML', 'CSS', 'React', 'REST API'], link: 'http://jobbyappbysiri.ccbp.tech/' },
     ],
     backend: [
@@ -42,11 +40,12 @@ const Projects = () => {
     const renderProjects = (category) => {
         return projectData[category].map((project, index) => (
             <motion.div
-                className="project-card"
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 17, delay: index * 5 }}
+                className="project-card"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
             >
                 <img src={project.image} alt={project.title} className="project-image" />
                 <div>
